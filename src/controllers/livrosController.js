@@ -67,6 +67,23 @@ class BooksController {
         }
       });
   };
+  
+  static retrieveBookByEditora = (req, res) => {
+    let editora = req.query.editora;
+    books
+      .find({'editora': editora}, {})
+      //trazendo somente a propriedade name do autor, omitindo assim a nacionalidade
+      .populate("author", "name")
+      .exec((err, books) => {
+        if (err) {
+          res
+            .status(400)
+            .send({ message: `${err.message} - ID do livro não localizado` });
+        } else {
+          res.status(200).send(books);
+        }
+      });
+  };
 }
 
 function getBook(id) {
