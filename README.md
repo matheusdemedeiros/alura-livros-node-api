@@ -7,7 +7,7 @@
 
 ### Tecnologias envolvidas
 - ***JavaScript*** e ***Node*** como linguagem e ambiente de execução;
-- ***Biblioteca Nodemon*** para fazer o auto-reload do projeto a cada alteração;
+- ***Biblioteca Nodemon*** para fazer o live-reload do projeto a cada alteração;
 - ***MongoDB*** e ***MongoDb Atlas*** como banco de dados e servidor de banco em núvem;
 - ***Biblioteca Mongoose*** para trabalhar com MongoDb no Node.js;
 
